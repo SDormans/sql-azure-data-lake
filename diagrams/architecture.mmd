@@ -1,0 +1,6 @@
+graph LR
+    A[Source Systems] -->|ADF Pipeline| B[ADLS Gen2 /raw]
+    B -->|Databricks ETL| C[ADLS Gen2 /processed]
+    C -->|Spark / SQL| D[ADLS Gen2 /curated]
+    D -->|External Tables| E[Azure Synapse Analytics]
+    E --> F[BI Dashboards]
