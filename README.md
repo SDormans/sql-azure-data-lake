@@ -139,3 +139,4 @@ ORDER BY monthly_revenue DESC;
 3. Replace placeholder credentials and storage paths with your Azure values.
 4. Execute in Azure Synapse Studio or SSMS connected to Synapse.
 5. Connect Power BI or Tableau to the curated tables for dashboarding.
+# sql-azure-data-lake
