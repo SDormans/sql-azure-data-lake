@@ -1,0 +1,5 @@
+{"log_id":2001,"customer_id":501,"event_timestamp":"2024-01-05 08:15:00","event_type":"page_view","page_visited":"/home","device":"Mobile"}
+{"log_id":2002,"customer_id":502,"event_timestamp":"2024-01-05 09:30:00","event_type":"page_view","page_visited":"/products","device":"Desktop"}
+{"log_id":2004,"customer_id":504,"event_timestamp":"2024-01-05 11:05:00","event_type":"add_to_cart","page_visited":"/products/13","device":"Tablet"}
+{"log_id":2005,"customer_id":504,"event_timestamp":"2024-01-05 11:12:00","event_type":"purchase","page_visited":"/checkout","device":"Tablet"}
+{"log_id":2006,"customer_id":null,"event_timestamp":"2024-01-05 12:40:00","event_type":"page_view","page_visited":"/home","device":"Desktop"}
