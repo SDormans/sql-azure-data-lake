@@ -134,7 +134,7 @@ UPDATE dbo.etl_watermark SET watermark_value = @new_watermark, updated_at = GETD
 WHERE table_name = 'dbo.stg_sales';
 ```
 
-The window is deleted before it is inserted and the watermark only advances after the insert, so a failed run can safely be re-run.
+The window is deleted before it is inserted and the watermark only advances after the insert, so a failed run can safely be re-run. Runs must not overlap (set the ADF pipeline concurrency to 1).
 
 ### 3. Transform Data (Cleaning & Aggregation)
 

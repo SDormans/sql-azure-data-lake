@@ -13,6 +13,10 @@
 --      advanced afterwards, so a failed run can simply be re-run.
 --
 -- Prerequisites: 01 and 02 have run (02 performs the initial full load).
+-- Concurrency:   run one load at a time (e.g. ADF pipeline concurrency = 1).
+--                Overlapping runs can both delete the window before either
+--                inserts it, leaving duplicates that the staging duplicate
+--                check in tests/quality_checks.sql will report.
 -- Limitation:    rows written to /processed with a loaded_at at or below the
 --                current watermark (late arrivals, backfills) are not picked up;
 --                lower watermark_value in dbo.etl_watermark to reload them.
