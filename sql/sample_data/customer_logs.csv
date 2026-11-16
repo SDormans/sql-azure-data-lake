@@ -1,4 +1,0 @@
-log_id,customer_id,event_timestamp,event_type,page_visited,device
-2001,501,2024-01-05 08:15:00,page_view,/home,Mobile
-2002,502,2024-01-05 09:30:00,page_view,/products,Desktop
-2003,501,2024-01-06 14:00:00,purchase,/checkout,Mobile

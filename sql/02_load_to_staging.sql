@@ -11,9 +11,18 @@ CREATE TABLE dbo.stg_sales (
     quantity         INT,
     unit_price       DECIMAL(10,2),
     region           VARCHAR(50),
-    loaded_at        DATETIME2 DEFAULT GETDATE()
+    loaded_at        DATETIME2 DEFAULT GETDATE()   -- carried over from /processed; watermark for 05
 );
 
-INSERT INTO dbo.stg_sales
-SELECT *
+-- Initial full load. Recurring loads use 05_incremental_load.sql.
+INSERT INTO dbo.stg_sales (transaction_id, transaction_date, customer_id,
+                           product_id, quantity, unit_price, region, loaded_at)
+SELECT transaction_id,
+       transaction_date,
+       customer_id,
+       product_id,
+       quantity,
+       unit_price,
+       region,
+       loaded_at
 FROM ext.sales_transactions;
